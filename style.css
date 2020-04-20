@@ -8,6 +8,11 @@
 body {
   background: #17181a;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+body.hide {
+  overflow: hidden;
 }
 
 #logo {
@@ -27,6 +32,8 @@ body {
   width: 80%;
   margin: auto;
   padding: 2rem 0rem;
+  position: relative;
+  z-index: 2;
 }
 
 .line1,
@@ -69,6 +76,7 @@ body {
   position: relative;
   flex: 1;
   flex-basis: 25;
+  overflow: hidden; /*for scale animation GSAP*/
 }
 
 .hero-img img {
@@ -86,7 +94,7 @@ body {
 }
 
 .hike-span {
-  color: rgb(232, 110, 110);
+  color: rgb(235, 70, 70);
 }
 
 .hero-desc h2 {
@@ -156,10 +164,10 @@ body {
 .reveal-text {
   position: absolute; /*in context of hero-desc and hero p positions*/
   width: 100%;
-  height: 100%;
+  height: 150%;
   background: #17181a;
   left: 0;
-  top: 0;
+  top: -15%;
 }
 
 /*for circle cursor*/
@@ -169,4 +177,102 @@ body {
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out; /*connected to cursor circle to*/
+  transition-property: background, transform;
+  transform-origin: 75% 75%; /*cursor at center*/
+}
+
+.cursor.nav-active {
+  background: rgb(235, 70, 70);
+  transform: scale(3);
+}
+
+.cursor.exp-active {
+  background: whitesmoke;
+  transform: scale(3);
+}
+.cursor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+.title {
+  position: relative;
+  overflow: hidden;
+}
+.title-swipe {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+
+.t-swipe1 {
+  background: rgb(86, 129, 229);
+}
+.t-swipe2 {
+  background: rgb(235, 70, 70);
+}
+.t-swipe3 {
+  background: rgb(255, 139, 93);
+}
+
+/*Other pages*/
+/*FASHION*/
+.fashion1,
+.fashion2,
+.fashion3 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.fashion-img {
+  height: 70vh;
+  flex-basis: 30rem;
+}
+.fashion-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+}
+.fashion-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashion-text h1 {
+  font-size: 6rem;
+  padding: 5rem 0;
+}
+
+.fashion1 h1 {
+  color: rgb(255, 139, 93);
+}
+
+.fashion1 h2 {
+  color: rgb(167, 115, 231);
+}
+
+.fashion1 h3 {
+  color: rgb(86, 129, 225);
 }
