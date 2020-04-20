@@ -9,10 +9,15 @@ body {
   background: #17181a;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 
 body.hide {
   overflow: hidden;
+}
+
+main {
+  position: absolute;
 }
 
 #logo {
@@ -86,7 +91,7 @@ body.hide {
 }
 
 .fashion-span {
-  color: rgb(255, 139, 93);
+  color: rgb(235, 70, 70);
 }
 
 .mountain-span {
@@ -94,7 +99,7 @@ body.hide {
 }
 
 .hike-span {
-  color: rgb(235, 70, 70);
+  color: rgb(241, 238, 44);
 }
 
 .hero-desc h2 {
@@ -164,10 +169,10 @@ body.hide {
 .reveal-text {
   position: absolute; /*in context of hero-desc and hero p positions*/
   width: 100%;
-  height: 150%;
+  height: 100%;
   background: #17181a;
   left: 0;
-  top: -15%;
+  top: 0%;
 }
 
 /*for circle cursor*/
@@ -212,8 +217,8 @@ body.hide {
   position: absolute;
   pointer-events: none;
   width: 100%;
-  height: 100%;
-  top: 0%;
+  height: 101%;
+  top: 0;
   left: 0;
   mix-blend-mode: darken;
   transform: translateY(100%);
@@ -223,10 +228,10 @@ body.hide {
   background: rgb(86, 129, 229);
 }
 .t-swipe2 {
-  background: rgb(235, 70, 70);
+  background: rgb(241, 238, 44);
 }
 .t-swipe3 {
-  background: rgb(255, 139, 93);
+  background: rgb(235, 70, 70);
 }
 
 /*Other pages*/
@@ -241,7 +246,7 @@ body.hide {
   width: 70%;
   margin: auto;
   color: white;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
   flex-wrap: wrap;
   position: relative;
 }
@@ -262,17 +267,200 @@ body.hide {
 
 .fashion-text h1 {
   font-size: 6rem;
-  padding: 5rem 0;
+  padding: 3rem 0 2rem;
 }
 
 .fashion1 h1 {
   color: rgb(255, 139, 93);
 }
 
-.fashion1 h2 {
+.fashion2 h1 {
   color: rgb(167, 115, 231);
 }
 
-.fashion1 h3 {
+.fashion3 h1 {
   color: rgb(86, 129, 225);
+}
+
+.fashion-text p {
+  font-size: 1.5rem;
+  padding: 2rem 2rem 0 0;
+  margin-bottom: 10rem;
+}
+
+.fashion-num {
+  font-size: 15rem;
+  position: absolute;
+  color: white;
+  opacity: 0.2;
+}
+
+.num1 {
+  color: rgb(255, 139, 93);
+  z-index: -1;
+  left: 0;
+  bottom: 10%;
+}
+
+.num2 {
+  color: rgb(167, 115, 231);
+  z-index: 3;
+  top: 0;
+  right: 0;
+  opacity: 0.3;
+}
+
+.num3 {
+  color: rgb(86, 129, 225);
+  z-index: 3;
+  top: 35%;
+  right: 35%;
+  opacity: 0.3;
+}
+
+.sunshine {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: -107px;
+  left: 0;
+}
+
+.sunshine img {
+  width: 1536px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*barba transition*/
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.swipe1 {
+  background: rgb(241, 238, 44);
+  z-index: 5;
+}
+
+.swipe2 {
+  background: rgb(86, 129, 225);
+  z-index: 4;
+}
+.swipe3 {
+  background: rgb(235, 70, 70);
+  z-index: 3;
+}
+
+/*responsive*/
+@media screen and (max-width: 1500px) {
+  .hero-img {
+    min-height: 50vh;
+  }
+
+  .hero-img img {
+    width: 70%;
+    height: 50%;
+  }
+
+  .fashion-text h1 {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  .fashion-text p {
+    font-size: 1.2rem;
+  }
+
+  .fashion-img img {
+    height: 50vh;
+    object-position: top;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-desc {
+    padding: 0;
+  }
+
+  .hero-img {
+    padding-top: 3rem;
+  }
+
+  .hero-desc h2 {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  .hero-desc p {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .explore {
+    width: 60%;
+    margin: auto;
+  }
+
+  .detail-slide {
+    width: 100%;
+    text-align: center;
+  }
+
+  .fashion-text p {
+    margin-bottom: 4rem;
+    padding: 0;
+  }
+
+  .fashion-text h1 {
+    margin: 2rem 0;
+  }
+
+  .fashion-num {
+    font-size: 10rem;
+  }
+
+  .nav-bar {
+    display: block;
+  }
+
+  .nav-links {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .contact h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .contact p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-img img {
+    width: 100%;
+  }
 }
