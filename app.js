@@ -105,8 +105,8 @@ const burger = document.querySelector(".burger");
 
 function cursor(e) {
   //   console.log(wheel);
-  mouse.style.top = e.pageY + "px";
-  mouse.style.left = e.pageX + "px";
+  mouse.style.top = e.y + "px";
+  mouse.style.left = e.x + "px";
 }
 
 //hovering

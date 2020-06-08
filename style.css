@@ -10,6 +10,7 @@ body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
   position: relative;
+  cursor: none;
 }
 
 body.hide {
