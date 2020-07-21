@@ -114,6 +114,7 @@ function activeCursor(e) {
   const item = e.target;
 
   if (item.id === "logo" || item.classList.contains("burger")) {
+    console.log(item.id, item.classList);
     mouse.classList.add("nav-active");
   } else {
     mouse.classList.remove("nav-active");

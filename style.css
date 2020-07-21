@@ -177,6 +177,17 @@ main {
 }
 
 /*for circle cursor*/
+
+.glass {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 99;
+}
+
 .cursor {
   width: 3rem;
   height: 3rem;
